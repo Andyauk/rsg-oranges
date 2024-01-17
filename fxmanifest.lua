@@ -3,15 +3,13 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 game "rdr3"
 
 description 'rsg-oranges'
-version '1.0.0'
+version '1.0.1'
 
 client_scripts {
-    'client/client.lua',
+    'client/*.lua'
 }
 server_scripts {
-    'server/server.lua',
-	'@oxmysql/lib/MySQL.lua',
-	'@rsg-core/shared/locale.lua',
+    'server/*.lua'
 }
 
 shared_scripts {
