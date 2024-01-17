@@ -10,7 +10,7 @@
 
 # Installation
 
-- very pick and delivery System
+- simple pick and delivery System
 
 - ensure that the dependancies are added and started
 - add rsg-oranges to your resources folder
