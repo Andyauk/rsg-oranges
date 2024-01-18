@@ -6,6 +6,21 @@ local GatheredOranges = {}
 
 local OrangeGroup = GetRandomIntInRange(0, 0xffffff)
 
+------
+
+function goCollect()
+    local playerPed = PlayerPedId()
+    RequestAnimDict('mech_pickup@plant@berries')
+    while not HasAnimDictLoaded('mech_pickup@plant@berries') do
+        Wait(100)
+    end
+    TaskPlayAnim(playerPed, 'mech_pickup@plant@berries', 'enter_lf', 8.0, -0.5, -1, 0, 0, true, 0, false, 0, false)
+    Wait(800)
+    TaskPlayAnim(playerPed, 'mech_pickup@plant@berries', 'base', 8.0, -0.5, -1, 0, 0, true, 0, false, 0, false)
+    Wait(2300)
+    active = false
+    ClearPedTasks(playerPed)
+end
 
 ---- Orange Gathering ----
 function Gather()
@@ -67,6 +82,7 @@ end)
 
 function goGather(orange)
     while hastool == true do
+		goCollect()
         TriggerServerEvent('rsg-oranges:addItem')
 		active = false
 		table.insert(GatheredOranges, orange)
