@@ -3,8 +3,8 @@ Config.OrangeTrees = {
 	'p_tree_orange_01',
 }
 Config.Items = {    
-    {name = "nothing", label = "nothing", chance = 3, amount = 1},
-    {name = "orange", label = "orange", chance = 10, amount = 1},
+    {name = "nothing", label = "nothing", chance = 10, amount = 1},
+    {name = "orange", label = "orange", chance = 5, amount = 1},
 }
 
 Config.MainSprite = 486881925 -- Job Blip sprite
